@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background:rgb(194, 236, 243);
+  background: #f1f5c9;
   color: #333;
   min-height: 100vh;
   display: flex;
@@ -66,34 +66,91 @@ button:hover {
 }
 
 /* ============================ */
-/* 🟨 Media Query até 500px */
-@media (max-width: 500px ) {
-  body {
-    
-    padding: 10px;
-    background-color: red;
-  }
-
-  .container {
-    width: 99%;
-    max-width: 500px;         /* Remove limite artificial */
-    padding: 20px 15px;
-   
-    border-radius: 8px;
-    background-color: aquamarine;
-   ;
-  }
-
+/* 🟨 Media Query até 1000px */
+@media (max-width: 1000px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
   }
 
   #joke {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 25px 18px;
+    max-width: 500px;
+    padding: 50px
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+}
+
+/* ============================ */
+/* 🟨 Media Query até 720px */
+@media (max-width: 720px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  #joke {
+    font-size: 1.1rem;
+  }
+
+  .container {
+    padding: 20px 16px;
+  }
+
+  .container img {
+    max-width: 250px;
+  }
+
+  button {
+    width: 100%;
     font-size: 1rem;
+    padding: 14px;
+  }
+}
+
+/* ============================ */
+/* 🟨 Media Query até 500px */
+@media (min-width: 300px) {
+  body {
+  
+    padding: 10px;
+  
+  }
+
+  .container {
+    width: 90%;
+    max-width: none;         /* Remove limite artificial */
+    padding: 20px 15px;
+    box-shadow: none;
+    border-radius: 8px;
+    background-color: aquamarine;
+  
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  #joke {
+    font-size: 2.2rem;
   }
 
   .container img {
@@ -102,7 +159,7 @@ button:hover {
 
   button {
     width: 100%;
-    font-size: 1rem;
+    font-size: 2rem;
     padding: 14px;
   }
 }
