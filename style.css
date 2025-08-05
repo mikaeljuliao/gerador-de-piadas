@@ -15,7 +15,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  overflow-x: hidden;
+  overflow: hidden; /* IMPEDIR rolagem vertical indesejada */
 }
 
 /* CONTAINER */
@@ -41,7 +41,7 @@ h1 {
 
 /* IMAGEM */
 .container img {
-  max-width: 180px;
+  max-width: 200px;
   height: auto;
   margin-bottom: 25px;
   display: block;
@@ -83,50 +83,57 @@ button:hover {
   background-color: #e68900;
 }
 
-/* MEDIA QUERIES 🔽 */
+/* 🔽 MEDIA QUERIES RESPONSIVAS */
 
-/* 🟡 TELAS ATÉ 480px */
+/* CELULARES PEQUENOS (ATÉ 480px) */
 @media (max-width: 480px) {
+  body {
+    padding: 10px;
+    overflow: hidden;
+  }
+
   .container {
-    padding: 32px 24px;
+    padding: 32px 20px;
     max-width: 95%;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 
   .container img {
-    max-width: 150px;
-    margin-bottom: 20px;
+    max-width: 200px;
   }
 
   .section h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   #joke {
-    font-size: 1.05rem;
+    font-size: 2.05rem;
+    font-weight: bold;
   }
 
   button {
     padding: 12px 22px;
     font-size: 1rem;
+    font-weight: bold;
+    
   }
 }
 
-/* 🟡 TELAS ATÉ 768px (Tablets) */
+/* TABLETS ATÉ 768px */
 @media (max-width: 768px) {
   .container {
     padding: 35px 25px;
   }
 
   h1 {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
   }
 
   .container img {
-    max-width: 160px;
+    max-width: 180px;
   }
 
   .section h2 {
@@ -138,7 +145,7 @@ button:hover {
   }
 }
 
-/* 🟡 TELAS ATÉ 1000px (Laptops menores) */
+/* TELAS ATÉ 1000px */
 @media (max-width: 1000px) {
   .container {
     padding: 38px 28px;
@@ -149,7 +156,7 @@ button:hover {
   }
 
   .container img {
-    max-width: 170px;
+    max-width: 190px;
   }
 
   .section h2 {
