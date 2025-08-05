@@ -1,165 +1,162 @@
-/* Reset e base */
+/* RESET BÁSICO */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* CORPO */
 body {
   font-family: Arial, sans-serif;
-  background: #f1f5c9;
-  color: #333;
+  background: linear-gradient(to right, #00b4db, #0083b0);
+  color: #fff;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 20px;
   overflow-x: hidden;
- 
 }
 
-/* Container principal */
+/* CONTAINER */
 .container {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  padding: 40px 30px;
+  max-width: 600px;
   width: 100%;
-  max-width: 700px;
-  background: white;
-  padding: 30px 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   gap: 20px;
-  
 }
 
-/* Imagem */
+/* TÍTULO */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* IMAGEM */
 .container img {
-  width: 100%;
-  max-width: 300px;
-  margin: 5px auto;
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 25px;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Seção da piada */
+/* SEÇÃO DA PIADA */
 .section {
-  margin: 20px 0;
-}
-#joke{
-  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
 }
 
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+#joke {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+/* BOTÃO */
 button {
   padding: 12px 24px;
-  margin-top: 20px;
-  background-color: #007bff;
   border: none;
+  border-radius: 8px;
+  background-color: #ff9800;
   color: white;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #e68900;
 }
 
-/* ============================ */
-/* 🟨 Media Query até 1000px */
-@media (max-width: 1000px) {
+/* MEDIA QUERIES 🔽 */
+
+/* 🟡 TELAS ATÉ 480px */
+@media (max-width: 480px) {
+  .container {
+    padding: 32px 24px;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container img {
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  #joke {
+    font-size: 1.05rem;
+  }
+
+  button {
+    padding: 12px 22px;
+    font-size: 1rem;
+  }
+}
+
+/* 🟡 TELAS ATÉ 768px (Tablets) */
+@media (max-width: 768px) {
+  .container {
+    padding: 35px 25px;
+  }
+
   h1 {
     font-size: 2.2rem;
   }
 
-  h2 {
+  .container img {
+    max-width: 160px;
+  }
+
+  .section h2 {
+    font-size: 1.6rem;
+  }
+
+  #joke {
+    font-size: 1.1rem;
+  }
+}
+
+/* 🟡 TELAS ATÉ 1000px (Laptops menores) */
+@media (max-width: 1000px) {
+  .container {
+    padding: 38px 28px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .container img {
+    max-width: 170px;
+  }
+
+  .section h2 {
     font-size: 1.7rem;
   }
 
   #joke {
-    font-size: 1.2rem;
-  }
-
-  .container {
-    padding: 25px 18px;
-    max-width: 500px;
-    padding: 50px
-  }
-
-  button {
-    font-size: 1.1rem;
-  }
-}
-
-/* ============================ */
-/* 🟨 Media Query até 720px */
-@media (max-width: 720px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  #joke {
-    font-size: 1.1rem;
-  }
-
-  .container {
-    padding: 20px 16px;
-  }
-
-  .container img {
-    max-width: 250px;
-  }
-
-  button {
-    width: 100%;
-    font-size: 1rem;
-    padding: 14px;
-  }
-}
-
-/* ============================ */
-/* 🟨 Media Query até 500px */
-@media (min-width: 300px) {
-  body {
-  
-    padding: 10px;
-  
-  }
-
-  .container {
-    width: 90%;
-    max-width: none;         /* Remove limite artificial */
-    padding: 20px 15px;
-    box-shadow: none;
-    border-radius: 8px;
-    background-color: aquamarine;
-  
-  }
-
-  h1 {
-    font-size: 3.5rem;
-    margin-top: 10px;
-  }
-
-  h2 {
-    font-size: 3.2rem;
-  }
-
-  #joke {
-    font-size: 2.2rem;
-  }
-
-  .container img {
-    max-width: 100%;
-  }
-
-  button {
-    width: 100%;
-    font-size: 2rem;
-    padding: 14px;
+    font-size: 1.15rem;
   }
 }
