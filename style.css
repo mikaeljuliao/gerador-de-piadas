@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #f1f5c9;
+  background:rgb(194, 236, 243);
   color: #333;
   min-height: 100vh;
   display: flex;
@@ -65,24 +65,23 @@ button:hover {
   background-color: #0056b3;
 }
 
-
 /* ============================ */
 /* 🟨 Media Query até 500px */
-@media (max-width: 500px) {
+@media (max-width: 500px ) {
   body {
-    align-items: flex-start;
+    
     padding: 10px;
-    outline: 1px solid red;
+    background-color: red;
   }
 
   .container {
-    width: 100%;
-    max-width: none;         /* Remove limite artificial */
+    width: 99%;
+    max-width: 500px;         /* Remove limite artificial */
     padding: 20px 15px;
-    box-shadow: none;
+   
     border-radius: 8px;
     background-color: aquamarine;
-    outline: 1px solid red;
+   ;
   }
 
   h1 {
@@ -99,62 +98,6 @@ button:hover {
 
   .container img {
     max-width: 100%;
-  }
-
-  button {
-    width: 100%;
-    font-size: 1rem;
-    padding: 14px;
-  }
-}
-
-/* ============================ */
-/* 🟨 Media Query até 1000px */
-@media (max-width: 1000px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.7rem;
-  }
-
-  #joke {
-    font-size: 1.2rem;
-  }
-
-  .container {
-    padding: 25px 18px;
-    max-width: 500px;
-    padding: 50px
-  }
-
-  button {
-    font-size: 1.1rem;
-  }
-}
-
-/* ============================ */
-/* 🟨 Media Query até 720px */
-@media (max-width: 720px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  #joke {
-    font-size: 1.1rem;
-  }
-
-  .container {
-    padding: 20px 16px;
-  }
-
-  .container img {
-    max-width: 250px;
   }
 
   button {
